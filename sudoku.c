@@ -43,27 +43,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
-    int i, j, k;
-    int f[10];
-
-    for (k = 0 ; k < 10 ; k++) {
-      f[k] = 0;
-    }
-
-    for (i = 0 ; i < 9 ; i++) {
-      for (j = 0 ; j < 9 ; j++) {
-        if (f[n->sudo[i][j]] != 0) {
-          return 0;
-        } else {
-          f[n->sudo[i][j]] = 1;
-        }
-      }
-      for (k = 0 ; k < 10 ; k++) {
-      f[k] = 0;
-      }
-    }
-
+   
     return 1;
 }
 
