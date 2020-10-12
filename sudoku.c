@@ -51,7 +51,7 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n){
     List* list=createList();
     
-    printf("\n%i\n", n->sudo[2][1]);
+    printf("\n%i\n", n->sudo[2][2]);
     
     
     
