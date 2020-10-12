@@ -50,23 +50,17 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
-    int i, j, k;
+    int i, j;
 
     for (i = 0 ; i < 9 ; i++) {
-      for (j = 0 ; j < 9 ; j++) {
-        printf("\n%i\n",n->sudo[i][j]);
+      for (j = 0 ; j < 9 ; j++) {        
         if (n->sudo[i][j] == 0) {
-          for (k = 1 ; k <= 9 ; k++) {
-            Node *adj_node = copy(n);
-            adj_node->sudo[i][j] = k;
-            pushBack(list, adj_node);            
-          }
-          return list;
+          printf("%i %i\n", i, j);
         }
       }
     }
 
-    return 0;
+    return list;
 }
 
 
