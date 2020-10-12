@@ -54,13 +54,13 @@ List* get_adj_nodes(Node* n){
     int flag = 0;
 
     for (i = 0 ; i < 9 ; i++) {
+      if (flag == 1) break;
       for (j = 0 ; j < 9 ; j++) {        
+        if (flag == 1) break;
         if (n->sudo[i][j] == 0) {
           flag = 1;
         }
-        if (flag == 0) break;
       }
-      if (flag == 0) break;
     }
 
     for (k = 1 ; k <= 9 ; k++) {
