@@ -44,12 +44,12 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
    
-   int i,j;
+   int i,j, u;
 
     int a[10];
 
-    for (i = 0 ; i < 10 ; i++) {
-      a[i] = 0;
+    for (u = 0 ; u < 10 ; u++) {
+      a[u] = 0;
     }
     
     for (i = 0 ; i < 9 ; i++) {
@@ -61,8 +61,8 @@ int is_valid(Node* n){
                   a[n->sudo[i][j]-1] = 1; 
                 }    
        }
-      for (i = 0 ; i < 10 ; i++) {
-      a[i] = 0;
+      for (u = 0 ; u < 10 ; u++) {
+      a[u] = 0;
       }         
     }
   }
@@ -76,15 +76,11 @@ int is_valid(Node* n){
                   a[n->sudo[j][i]-1] = 1; 
                 }    
        }
-      for (i = 0 ; i < 10 ; i++) {
-      a[i] = 0;
+      for (u = 0 ; u < 10 ; u++) {
+      a[u] = 0;
       }         
     }
-  }
-
-
-
-    
+  }   
     return 1;
 }
 
