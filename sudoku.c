@@ -48,12 +48,12 @@ int is_valid(Node* n){
 
     int a[10];
 
-    for (u = 0 ; u < 9 ; u++) {
+    for (u = 0 ; u < 10 ; u++) {
       a[u] = 0;
     }
     
-    for (i = 0 ; i < 9 ; i++) {
-      for (j = 0 ; j < 9 ; j++) {  
+    for (i = 0 ; i < 10 ; i++) {
+      for (j = 0 ; j < 10 ; j++) {  
             if (n->sudo[i][j] != 0) {
                if (a[n->sudo[i][j]] != 0) {
                    return 0;
@@ -67,8 +67,8 @@ int is_valid(Node* n){
     }
   }
 
-    for (i = 0 ; i < 9 ; i++) {
-      for (j = 0 ; j < 9 ; j++) {  
+    for (i = 0 ; i < 10 ; i++) {
+      for (j = 0 ; j < 10 ; j++) {  
             if (n->sudo[j][i] != 0) {
                if (a[n->sudo[j][i]] != 0) {
                    return 0;
@@ -76,7 +76,7 @@ int is_valid(Node* n){
                   a[n->sudo[j][i]] = 1; 
                 }    
             }
-      for (u = 0 ; u < 9 ; u++) {
+      for (u = 0 ; u < 10 ; u++) {
       a[u] = 0;
       }         
     }
@@ -84,7 +84,7 @@ int is_valid(Node* n){
 
     int k,p;
    
-    for (k = 0; k < 9 ; k++) {
+    for (k = 0; k < 10 ; k++) {
         for(p=0;p<9;p++){
             if (n->sudo[i][j] != 0) {
               if (a[n->sudo[i][j]] != 0) {
