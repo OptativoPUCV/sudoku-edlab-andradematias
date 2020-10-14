@@ -61,7 +61,7 @@ int is_valid(Node* n){
                   a[n->sudo[i][j]] = 1; 
                 }    
             }
-      for (u = 0 ; u < 9 ; u++) {
+      for (u = 0 ; u < 10 ; u++) {
       a[u] = 0;
       }         
     }
