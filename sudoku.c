@@ -83,7 +83,7 @@ int is_valid(Node* n){
     for (u = 0 ; u <= 9 ; u++) {
         a[u] = 0;
     }
-    
+
     for (k = 0 ; k < 9 ; k++) {       
       for(p=0;p<9;p++) {
         i=3*(k/3) + (p/3);
@@ -92,7 +92,7 @@ int is_valid(Node* n){
           if (a[n->sudo[i][j]] != 0) {
             return 0;
           } else {
-            a[n->sudo[j][i]] = 1;
+            a[n->sudo[j][j]] = 1;
           }
         }        
       }
