@@ -83,11 +83,8 @@ int is_valid(Node* n){
     for (u = 0 ; u <= 9 ; u++) {
         a[u] = 0;
     }
-
-    i = 1; 
-    j = 1;
-
-    for (k = 1 ; k <= 9 ; k++) {       
+    
+    for (k = 0 ; k < 9 ; k++) {       
       for(p=0;p<9;p++) {
         i=3*(k/3) + (p/3);
         j=3*(k%3) + (p%3);
