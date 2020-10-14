@@ -44,31 +44,31 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
    
-   int i,j, u;
+   int i, j, u;
 
     int a[10];
 
-    for (u = 0 ; u < 10 ; u++) {
+    for (u = 0 ; u <= 9 ; u++) {
       a[u] = 0;
     }
     
-    for (i = 0 ; i < 10 ; i++) {
-      for (j = 0 ; j < 10 ; j++) {  
+    for (i = 0 ; i < 9 ; i++) {
+      for (j = 0 ; j < 9 ; j++) {  
             if (n->sudo[i][j] != 0) {
                if (a[n->sudo[i][j]] != 0) {
                    return 0;
                 } else {
                   a[n->sudo[i][j]] = 1; 
                 }    
-            }
-      for (u = 0 ; u < 9 ; u++) {
+            }               
+      }
+      for (u = 0 ; u <= 9 ; u++) {
       a[u] = 0;
-      }         
+      }
     }
-  }
 
-    for (i = 0 ; i < 10 ; i++) {
-      for (j = 0 ; j < 10 ; j++) {  
+    for (i = 0 ; i < 9 ; i++) {
+      for (j = 0 ; j < 9 ; j++) {  
             if (n->sudo[j][i] != 0) {
                if (a[n->sudo[j][i]] != 0) {
                    return 0;
@@ -76,37 +76,11 @@ int is_valid(Node* n){
                   a[n->sudo[j][i]] = 1; 
                 }    
             }
-      for (u = 0 ; u < 10 ; u++) {
-      a[u] = 0;
-      }         
+      }   
+      for (u = 0 ; u <= 9 ; u++) {
+        a[u] = 0;
+      }
     }
-  }
-
-    int k,p;
-   
-    for (k = 0; k < 10 ; k++) {
-        for(p=0;p<9;p++){
-            i=3*(k/3) + (p/3);
-            j=3*(k%3) + (p%3);  
-            if (n->sudo[i][j] != 0) {
-              if (a[n->sudo[i][j]] != 0) {
-                return 0;
-              } else {
-                a[n->sudo[i][j]] = 1;
-              }
-            
-            }
-            }
-                      
-            if(p == 8) {
-                for (i = 0 ; i < 9 ; i++) {
-                a[i] = 0;
-                }                
-            }
-        }
-
-
-
   return 1;
 }
 
