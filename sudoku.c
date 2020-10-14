@@ -98,7 +98,7 @@ int is_valid(Node* n){
             i=3*(k/3) + (p/3);
             j=3*(k%3) + (p%3);            
             if(p == 8) {
-                for (i = 0 ; i<10 ; i++) {
+                for (i = 0 ; i < 9 ; i++) {
                 a[i] = 0;
                 }                
             }
