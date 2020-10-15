@@ -152,18 +152,13 @@ Node* DFS(Node* initial, int* cont){
         push(S, adj_node);
         adj_node = next(l);
       }
-
     }
-  }
-
-  
+  }  
   return NULL;
 }
 
 
-
-/*
-int main( int argc, char *argv[] ){
+/* int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
 
