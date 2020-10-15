@@ -100,7 +100,6 @@ int is_valid(Node* n){
         a[u] = 0;
       }
     }
-
     return 1;
 }
 
@@ -139,6 +138,13 @@ int is_final(Node* n){
 }
 
 Node* DFS(Node* initial, int* cont){
+  Stack* S = createStack();
+  push(S, initial);
+  while (!is_empty((List *)S)) {
+    return NULL;
+  }
+
+  
   return NULL;
 }
 
