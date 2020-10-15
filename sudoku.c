@@ -141,7 +141,19 @@ Node* DFS(Node* initial, int* cont){
   Stack* S = createStack();
   push(S, initial);
   while (!is_empty((List *)S)) {
-    return NULL;
+    Node * n = top(S);
+    pop(S);
+    if (is_final(n)) {
+      return n;
+    } else {
+      List *l = get_adj_nodes(n);
+      Node *adj_node = first(l);
+      while (adj_node) {
+        push(S, adj_node);
+        adj_node = next(l);
+      }
+
+    }
   }
 
   
